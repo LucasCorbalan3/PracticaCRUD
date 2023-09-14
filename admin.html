@@ -1,75 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="crud realizado con vanilla">
-    <meta name="keywords" content="">
-    <meta name="author" content="LC">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="crud realizado con vanilla" />
+    <meta name="keywords" content="" />
+    <meta name="author" content="LC" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
     <title>practica CRUD</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <header>
-        <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#">CRUD</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link " href="/index.html">Inicio</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="admin.html">Admin</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
+      <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">CRUD</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" href="/index.html">Inicio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="admin.html"
+                  >Admin</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
     </header>
     <main class="container">
-        <section class="my-5">
-            <h1 class="display-3 text-center text-primary">Administrar Productos
-            </h1>
-            <hr>
-            <form>
-                <div class="mb-3">
-                    <label for="codigo" class="form-label">Codigo</label>
-                    <input type="number" class="form-control" id="codigo" aria-placeholder="123"
-                        placeholder="name@example.com">
-                </div>
-                <div class="mb-3">
-                    <label for="producto" class="form-label">Producto</label>
-                    <input type="text" class="form-control" id="producto" aria-placeholder="EJ : Batman"
-                        placeholder="name@example.com">
-                </div>
-                <div class="mb-3">
-                    <label for="descripcion" class="form-label">Descripcion</label>
-                    <textarea class="form-control" id="descripcion" rows="3"></textarea>
-                </div>
-                <div class="mb-3">
-                    <label for="Cantidad" class="form-label">Cantidad</label>
-                    <input type="text" class="form-control" id="Cantidad" aria-placeholder="2"
-                        placeholder="name@example.com">
-                </div>
-                <div class="mb-3">
-                    <label for="URL" class="form-label">URL</label>
-                    <input type="text" class="form-control" id="URL" aria-placeholder="https://ejemplo.com"
-                        placeholder="name@example.com">
-                </div>
-                <button type="submit" class="btn btn-primary mb-3">Guardar</button>
-            </form>
-        </section>
+      <section class="my-5">
+        <h1 class="display-3 text-center text-primary">
+          Administrar Productos
+        </h1>
+        <hr />
+        <form>
+          <div class="mb-3">
+            <label for="codigo" class="form-label">Codigo</label>
+            <input
+              type="text"
+              class="form-control"
+              id="codigo"
+              aria-placeholder="123"
+              placeholder="123"
+              maxlength="3"
+              required
+            />
+            <div class="invalid-feedback">Debe ingresar un codigo valido</div>
+          </div>
+          <div class="mb-3">
+            <label for="producto" class="form-label">Producto</label>
+            <input
+              type="text"
+              class="form-control"
+              id="producto"
+              aria-placeholder="EJ : Batman"
+              placeholder="EJ :Batman"
+              maxlength="25"
+              required
+            />
+          </div>
+          <div class="mb-3">
+            <label for="descripcion" class="form-label">Descripcion</label>
+            <textarea
+              class="form-control"
+              id="descripcion"
+              rows="3"
+              maxlength="50"
+              required
+            ></textarea>
+          </div>
+          <div class="mb-3">
+            <label for="Cantidad" class="form-label">Cantidad</label>
+            <input
+              type="text"
+              class="form-control"
+              id="Cantidad"
+              aria-placeholder="2"
+              placeholder="name@example.com"
+              maxlength="30"
+              required
+            />
+          </div>
+          <div class="mb-3">
+            <label for="URL" class="form-label">URL</label>
+            <input
+              type="text"
+              class="form-control"
+              id="URL"
+              aria-placeholder="100"
+              placeholder="https://ejemplo.com"
+              maxlength="100"
+              required
+            />
+          </div>
+          <button type="submit" class="btn btn-primary mb-3">Guardar</button>
+        </form>
+        <div class="alert alert-danger my-3 d-none" role="alert">
+          Debes completar todos los campos!
+        </div>
+      </section>
     </main>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/admin.js"></script>
-</body>
-
+  </body>
 </html>
