@@ -1,20 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="crud realizado con vanilla" />
-    <meta name="keywords" content="" />
-    <meta name="author" content="LC" />
+    <meta name="description" content="crud realizado con vanilla js" />
+    <meta name="keywords" content="crud, vanilla js" />
+    <meta name="author" content="Lucas Corbalan" />
     <link rel="stylesheet" href="css/bootstrap.min.css" />
-    <title>practica CRUD</title>
+    <title>Práctica CRUD</title>
   </head>
-
   <body>
     <header>
       <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#">CRUD</a>
+          <a class="navbar-brand" href="index.html">CRUD</a>
           <button
             class="navbar-toggler"
             type="button"
@@ -29,7 +28,7 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link" href="/index.html">Inicio</a>
+                <a class="nav-link" href="index.html">Inicio</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link active" aria-current="page" href="admin.html"
@@ -44,22 +43,23 @@
     <main class="container">
       <section class="my-5">
         <h1 class="display-3 text-center text-primary">
-          Administrar Productos
+          Administrar productos
         </h1>
         <hr />
         <form>
           <div class="mb-3">
-            <label for="codigo" class="form-label">Codigo</label>
+            <label for="codigo" class="form-label">Código</label>
             <input
               type="text"
               class="form-control"
               id="codigo"
-              aria-placeholder="123"
               placeholder="123"
               maxlength="3"
               required
             />
-            <div class="invalid-feedback">Debe ingresar un codigo valido</div>
+            <div class="invalid-feedback">
+              Debe ingresar un código alfanumerico
+            </div>
           </div>
           <div class="mb-3">
             <label for="producto" class="form-label">Producto</label>
@@ -67,14 +67,13 @@
               type="text"
               class="form-control"
               id="producto"
-              aria-placeholder="EJ : Batman"
-              placeholder="EJ :Batman"
-              maxlength="25"
+              placeholder="Ej: Iron Man"
+              maxlength="30"
               required
             />
           </div>
           <div class="mb-3">
-            <label for="descripcion" class="form-label">Descripcion</label>
+            <label for="descripcion" class="form-label">Descripción</label>
             <textarea
               class="form-control"
               id="descripcion"
@@ -84,14 +83,13 @@
             ></textarea>
           </div>
           <div class="mb-3">
-            <label for="Cantidad" class="form-label">Cantidad</label>
+            <label for="cantidad" class="form-label">Cantidad</label>
             <input
               type="text"
               class="form-control"
-              id="Cantidad"
-              aria-placeholder="2"
-              placeholder="name@example.com"
-              maxlength="30"
+              id="cantidad"
+              placeholder="2"
+              maxlength="3"
               required
             />
           </div>
@@ -101,16 +99,15 @@
               type="text"
               class="form-control"
               id="URL"
-              aria-placeholder="100"
-              placeholder="https://ejemplo.com"
-              maxlength="100"
+              placeholder="https://127.0.0.1:8000/image.jpg"
+              maxlength="200"
               required
             />
           </div>
-          <button type="submit" class="btn btn-primary mb-3">Guardar</button>
+          <button type="submit" class="btn btn-primary">Guardar</button>
         </form>
         <div class="alert alert-danger my-3 d-none" role="alert">
-          Debes completar todos los campos!
+          Debe completar todos los campos requeridos
         </div>
       </section>
     </main>
